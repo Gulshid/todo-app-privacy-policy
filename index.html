@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Todo App</title>
+  <title>Privacy Policy – DoIt Smart Todo</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -114,6 +114,28 @@
       margin-top: 3px;
     }
 
+    .warn-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 0.55rem;
+      line-height: 1.6;
+    }
+
+    .warn-row svg {
+      width: 16px;
+      height: 16px;
+      stroke: #d97706;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
     hr {
       border: none;
       border-top: 1px solid #eee;
@@ -176,27 +198,29 @@
       Privacy Policy
     </div>
 
-    <h1>Todo App — Privacy Policy</h1>
-    <p class="meta">Effective date: June 4, 2026 &nbsp;·&nbsp; Last updated: June 4, 2026</p>
+    <h1>DoIt — Smart Todo: Privacy Policy</h1>
+    <p class="meta">Effective date: June 26, 2026 &nbsp;·&nbsp; Last updated: June 26, 2026</p>
 
+    <!-- OVERVIEW -->
     <div class="section">
       <h2 class="section-title">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         Overview
       </h2>
-      <p>This Privacy Policy describes how the Todo App ("we", "our", or "the App") handles information when you use our application. We are committed to protecting your privacy and being transparent about our data practices.</p>
+      <p>This Privacy Policy describes how DoIt — Smart Todo ("we", "our", or "the App") handles information when you use our application. We are committed to protecting your privacy and being transparent about our data practices. The App is a Flutter-based productivity tool that stores all of your personal data exclusively on your device.</p>
     </div>
 
+    <!-- INFORMATION WE COLLECT -->
     <div class="section">
       <h2 class="section-title">
-        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
         Information we collect
       </h2>
-      <p>We do not collect, store, process, or transmit any personal information from users of this application. The App is designed with a privacy-first approach — all data you create remains exclusively on your device.</p>
+      <p>We do not collect, store, process, or transmit any personal information to external servers. All data you create stays exclusively on your device. Specifically, we do <strong>not</strong> collect:</p>
       <div class="card">
         <div class="check-row">
           <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          No personal data collected (name, email, phone, or identifiers)
+          No personal identifiers (name, email, phone number, account)
         </div>
         <div class="check-row">
           <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -210,33 +234,119 @@
           <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
           No advertising identifiers used
         </div>
+        <div class="check-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          No data sent to our servers or any third-party servers
+        </div>
       </div>
     </div>
 
+    <!-- LOCAL DATA STORAGE -->
     <div class="section">
       <h2 class="section-title">
         <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
         Local data storage
       </h2>
-      <p>All tasks, notes, and content you create within the App are stored locally on your device using your device's built-in storage. This data never leaves your device and is not accessible to us or any third party. If you uninstall the App, all locally stored data will be permanently deleted.</p>
+      <p>All tasks, subtasks, categories, priorities, due dates, focus session durations, and completion history you create within the App are stored locally on your device using <strong>Hive</strong> (an on-device NoSQL database) and <strong>SharedPreferences</strong> (for app settings and gamification state). This data never leaves your device and is not accessible to us or any third party. If you uninstall the App, all locally stored data will be permanently deleted.</p>
+      <div class="card">
+        <div class="check-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>Task data</strong> — task text, subtasks, due dates, priority, category, recurrence settings, and completion timestamps are stored in a local Hive database on your device.</span>
+        </div>
+        <div class="check-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>Focus session data</strong> — time spent in Focus Mode per task is stored locally and used only to calculate your productivity insights and XP within the App.</span>
+        </div>
+        <div class="check-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>Gamification data</strong> — your XP points, earned badges, and streak data are stored locally in SharedPreferences and never transmitted externally.</span>
+        </div>
+        <div class="check-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>App preferences</strong> — theme settings (light/dark mode) and one-time setup flags are stored locally in SharedPreferences.</span>
+        </div>
+      </div>
     </div>
 
+    <!-- NOTIFICATIONS -->
+    <div class="section">
+      <h2 class="section-title">
+        <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        Local notifications
+      </h2>
+      <p>The App uses <strong>local push notifications</strong> (via <code>flutter_local_notifications</code>) to alert you when a task is due. These notifications are scheduled entirely on-device and are never routed through our servers or any third-party notification service. No notification content or metadata leaves your device.</p>
+      <div class="card">
+        <div class="check-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Notifications are scheduled locally on your device only.
+        </div>
+        <div class="check-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          No task content is transmitted to any server to deliver a notification.
+        </div>
+        <div class="check-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          You may deny notification permission at any time in your device settings; core task management features remain fully functional without it.
+        </div>
+      </div>
+      <p style="margin-top:0.75rem;">On Android, the App requests the <strong>POST_NOTIFICATIONS</strong> permission and, for exact due-date alerts, the <strong>SCHEDULE_EXACT_ALARM</strong> permission. If exact alarm permission is unavailable, the App falls back to inexact alarms. These permissions are used solely to deliver your own reminders and are never used to contact you for marketing purposes.</p>
+    </div>
+
+    <!-- SHARING FEATURE -->
+    <div class="section">
+      <h2 class="section-title">
+        <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        Share feature
+      </h2>
+      <p>The App includes an optional <strong>Share Progress Card</strong> feature that lets you export a screenshot of your productivity stats and share it via your device's native share sheet (e.g., to a messaging app, social media, or email). This sharing is entirely user-initiated and handled by your device's OS. The App does not upload your data to any server as part of this feature. A temporary image file is created in your device's cache directory and deleted when the share action completes.</p>
+    </div>
+
+    <!-- THIRD-PARTY SERVICES -->
     <div class="section">
       <h2 class="section-title">
         <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-        Third-party services
+        Third-party services &amp; libraries
       </h2>
-      <p>The Todo App does not integrate with any third-party analytics platforms, advertising networks, or data brokers. We do not share any information with external parties because no information is collected in the first place.</p>
+      <p>The App uses the following open-source libraries entirely on-device. None of them transmit personal data to external servers on our behalf:</p>
+      <div class="card">
+        <div class="warn-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>Hive / hive_flutter</strong> — on-device NoSQL database for task storage.</span>
+        </div>
+        <div class="warn-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>shared_preferences</strong> — on-device key-value store for app settings and gamification state.</span>
+        </div>
+        <div class="warn-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>flutter_local_notifications</strong> — schedules task reminder notifications locally on your device.</span>
+        </div>
+        <div class="warn-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>share_plus / path_provider</strong> — enables the optional progress-card sharing feature via your device's OS share sheet.</span>
+        </div>
+        <div class="warn-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>google_fonts</strong> — loads font files; this may result in a network request to Google's font CDN on first use. No personal data is sent.</span>
+        </div>
+        <div class="warn-row">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>provider / flutter_screenutil</strong> — UI state management and responsive layout; entirely on-device.</span>
+        </div>
+      </div>
+      <p style="margin-top:0.75rem;">The App does not integrate with any analytics platforms, advertising networks, or data brokers.</p>
     </div>
 
+    <!-- CHILDREN'S PRIVACY -->
     <div class="section">
       <h2 class="section-title">
         <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         Children's privacy
       </h2>
-      <p>The App does not knowingly collect personal information from children under the age of 13 (or the applicable age of digital consent in your region). Since we collect no data from any users, no special risk exists for younger users.</p>
+      <p>The App does not knowingly collect personal information from children under the age of 13 (or the applicable age of digital consent in your region). Since no data is collected from any users, no special risk exists for younger users.</p>
     </div>
 
+    <!-- CHANGES -->
     <div class="section">
       <h2 class="section-title">
         <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
@@ -247,6 +357,7 @@
 
     <hr>
 
+    <!-- CONTACT -->
     <div class="section">
       <h2 class="section-title">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -264,7 +375,7 @@
       </div>
     </div>
 
-    <p class="footer">This privacy policy applies solely to the Todo App and is governed by applicable data protection regulations. By using the App, you acknowledge that you have read and understood this policy.</p>
+    <p class="footer">This privacy policy applies solely to DoIt — Smart Todo and is governed by applicable data protection regulations. By using the App, you acknowledge that you have read and understood this policy.</p>
 
   </div>
 </body>
